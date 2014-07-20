@@ -1,0 +1,26 @@
+- provide(:title, 'Sign Up!')
+%h1 New User
+
+.row
+  .col.col-lg-6.col-offset-3
+    = form_for @user do |u|
+      = render 'shared/error_messages'
+
+      %br= u.label :username
+      = u.text_field :username
+
+      %br= u.label :name
+      = u.text_field :name
+
+      %br= u.label :email
+      = u.text_field :email
+
+      %br= u.label :password
+      = u.password_field :password
+
+      %br= u.label :password_confirmation
+      = u.password_field :password_confirmation
+      
+      %br
+      %br
+      = u.submit "Create account"

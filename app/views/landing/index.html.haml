@@ -1,2 +1,7 @@
-%h1 Welcome to SubMan!
-%p You don't appear to be logged in... 
+- provide(:title, 'Home')
+.center.jumbotron
+  %h1 Welcome to SubMan!
+
+  %h2 This is the home page!
+
+  = link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary"

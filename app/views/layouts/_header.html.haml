@@ -1,0 +1,9 @@
+%header.navbar-nav.navbar-fixed-top.navbar-inverse
+  .container
+    .navbar-brand
+      = link_to "SubMan", root_path, id: "logo"
+    %nav
+      %ul.nav.navbar-nav.navbar-right
+        %li= link_to "Home",    root_path
+        %li= link_to "Help",    help_path
+        %li= link_to "Sign In", signup_path
