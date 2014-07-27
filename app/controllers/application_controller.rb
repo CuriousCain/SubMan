@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   before_action :check_youtube_username
 
   def check_youtube_username
-    if signed_in? && current_user.youtube_username.empty?
+    if signed_in? && current_user.youtube_username.blank?
       flash.now[:danger] = "Your Youtube username still needs adding to your account!"
     end
   end
