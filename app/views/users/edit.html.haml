@@ -1,0 +1,23 @@
+- provide(:title, "Edit Profile")
+
+%h1 Update your profile
+
+.row
+  .col.col-lg-6.col-offset-3
+    = form_for @user do |f|
+      = render 'shared/error_messages'
+
+      = f.label :youtube_username
+      = f.text_field :youtube_username
+
+      %br
+
+      = f.label :password
+      = f.password_field :password
+
+      %br
+
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation
+
+      %br= f.submit "Save changes", class: "btn btn-lg btn-primary"

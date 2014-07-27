@@ -1,3 +1,14 @@
-= @user.name
-= @user.username
-= @user.email
+- provide(:title, @user.username)
+
+%h1= @user.username
+
+%p= "Name: #{@user.name}"
+%p= "Email: #{@user.email}"
+
+- if @user.youtube_username.nil?
+  %p= "Youtube Username: "
+- else
+  %p= "Youtube Username: #{@user.youtube_username}"
+
+%a.btn.btn-lg.btn-primary{:href => edit_user_path(current_user)}
+  Edit profile

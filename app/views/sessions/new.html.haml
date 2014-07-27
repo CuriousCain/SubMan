@@ -4,14 +4,15 @@
 .row
   .col.col-lg-6.col-offset-3
     = form_for(:session, url: sessions_path) do |f|
-      = f.label :username
+      %br= f.label :username
       = f.text_field :username
-      %br
-      = f.label :password
-      = f.password_field :password
-      %br
-      = f.submit "Sign in", class: "btn btn-lg btn-primary"
 
-    %p 
-      New user? 
+      %br= f.label :password
+      = f.password_field :password
+
+      %br
+      %br= f.submit "Sign in", class: "btn btn-lg btn-primary"
+
+    %p
+      New user?
       = link_to 'Sign up now!', signup_path

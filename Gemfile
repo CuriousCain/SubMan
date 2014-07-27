@@ -9,6 +9,7 @@ group :development, :test do
   gem 'sqlite3'
   # Use Rspec as the test framework
   gem 'rspec-rails'
+  gem 'factory_girl'
 end
 
 group :test do
