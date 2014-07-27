@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to SubMan!"
-      redirect_to @user
+      redirect_to root
     else
       render 'new'
     end

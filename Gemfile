@@ -10,6 +10,8 @@ group :development, :test do
   # Use Rspec as the test framework
   gem 'rspec-rails'
   gem 'factory_girl'
+  # meta_request is for the RailsPalen Chrome/ium extension
+  gem 'meta_request'
 end
 
 group :test do
